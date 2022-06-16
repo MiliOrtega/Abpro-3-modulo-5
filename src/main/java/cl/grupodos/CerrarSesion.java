@@ -29,7 +29,7 @@ public class CerrarSesion extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		getServletContext().getRequestDispatcher("/views/page/CerrarSesion.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/views/CerrarSesion.jsp").forward(request, response);
 		
 	}
 
@@ -49,9 +49,9 @@ public class CerrarSesion extends HttpServlet {
 		        case "Salir":
 		            session.invalidate();
 		            request.setAttribute("message", "Sesión finalizada.");
-		            response.sendRedirect("/views/page/validacion.jsp");
+		            response.sendRedirect("/views/validacion.jsp");
 		   
-	            getServletContext().getRequestDispatcher("/views/page/validacion.jsp").forward(request, response);
+	            getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
 		    }
 		
 	

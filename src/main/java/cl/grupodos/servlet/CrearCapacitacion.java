@@ -32,7 +32,7 @@ public class CrearCapacitacion extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		getServletContext().getRequestDispatcher("/views/page/Capacitacion.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/views/Capacitacion.jsp").forward(request, response);
 	}
 
 	/**

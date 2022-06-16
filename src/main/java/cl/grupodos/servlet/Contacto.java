@@ -30,7 +30,7 @@ public class Contacto extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		getServletContext().getRequestDispatcher("/views/page/Formulario.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/views/Formulario.jsp").forward(request, response);
 
 	}
 

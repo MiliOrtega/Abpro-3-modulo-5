@@ -26,7 +26,7 @@ public class Validacion extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		getServletContext().getRequestDispatcher("/views/page/validacion.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
 	}
 
 	
@@ -42,10 +42,10 @@ public class Validacion extends HttpServlet {
                     if(pass.length() > 0){
                         if(pass.equals(clave)){                           
                             out.println("<script>alert(\"siii\");</script>");                       
-                            getServletContext().getRequestDispatcher("/views/page/Formulario.jsp").forward(request, response);
+                            getServletContext().getRequestDispatcher("/views/Formulario.jsp").forward(request, response);
                            
                         }else{ 
-                        	getServletContext().getRequestDispatcher("/views/page/validacion.jsp").forward(request, response);
+                        	getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
                         	out.println("<script type=\"text/javascript\">\r\n" + "    alert('Contraseña Incorrecta');\r\n"
                         			+ "</script>");
                             
@@ -54,19 +54,19 @@ public class Validacion extends HttpServlet {
                         }
                     }else{                            
                             out.println("Debe ingresar una contraseña");                            
-                            getServletContext().getRequestDispatcher("/views/page/validacion.jsp").forward(request, response);
+                            getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
                            
                     }
                 }else{
                    ;
                     out.println("Usuario incorrecta");                   
-                    getServletContext().getRequestDispatcher("/views/page/validacion.jsp").forward(request, response);
+                    getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
                     
                 }
             }else{
                 
                 out.println("Debe ingresar un usuario");                
-                getServletContext().getRequestDispatcher("/views/page/validacion.jsp").forward(request, response);
+                getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
                 
             }
         }
