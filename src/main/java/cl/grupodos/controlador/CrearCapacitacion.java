@@ -1,4 +1,4 @@
-package cl.grupodos.servlet;
+package cl.grupodos.controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;

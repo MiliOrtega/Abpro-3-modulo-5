@@ -1,24 +1,27 @@
-package cl.grupodos;
+package cl.grupodos.controlador;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+
 
 /**
- * Servlet implementation class CerrarSesion
+ * Servlet implementation class Contacto
  */
-@WebServlet("/CerrarSesion")
-public class CerrarSesion extends HttpServlet {
+@WebServlet("/Contacto")
+public class Contacto extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
+	
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CerrarSesion() {
+    public Contacto() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,9 +30,8 @@ public class CerrarSesion extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		getServletContext().getRequestDispatcher("/views/CerrarSesion.jsp").forward(request, response);
-		
+		getServletContext().getRequestDispatcher("/views/Formulario.jsp").forward(request, response);
+
 	}
 
 	/**
@@ -38,21 +40,21 @@ public class CerrarSesion extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		   response.setContentType("text/html;charset=UTF-8");
-	       
-	        HttpSession sesion = request.getSession(true);
-	        
-	        
-	        sesion.invalidate();
-	        
-	        getServletContext().getRequestDispatcher("/views/login.jsp").forward(request, response);
-	       
-	    
-		   
-	            
-		    
-
-
-	
+		String nombre = request.getParameter("nombres"); 		
+		String email = request.getParameter("mail");
+		
+		PrintWriter salida;
+		response.setContentType("text/html");
+		salida = response.getWriter();
+		
+		salida.println("<html><body>");
+		salida.println("<h1> Contacto </h1>");
+		salida.println("<p> Sr/a: "+nombre+ " " + " "  +"</p>");
+		salida.println("<p> Correo electronico: "+ email +"</p>");
+		salida.println("<spam>"+ "Gracias por comunicarte con nosotros, a la brevedad nos comunicaremos contigo" +"</spam>");
+		salida.println("</body><html>");
+		
+		salida.close();
 	}
+
 }

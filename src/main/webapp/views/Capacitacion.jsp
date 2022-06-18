@@ -14,10 +14,10 @@
     />
 </head>
 <body>
-<header>
+
 
 <%@ include file ="navbar.jsp" %>
-</header>
+
 
 
        <section>
@@ -57,7 +57,7 @@
             <label for="msj"> Escribe tu Mensaje</label>
             <textarea name="msj" class="form-control" rows="3"></textarea>
           </div>
-          <button type="submit" class="btn btn-success btn-block my-4">Enviar</button>
+           <%@ include file = "button.jsp" %>
           
           
         </form>
@@ -67,9 +67,9 @@
             
  </section>
  
- <footer>
+ 
   <%@ include file ="footer.jsp" %>
-   </footer>  
+ 
  
       
  <script

@@ -14,10 +14,10 @@
 
 </head>
 <body>
-<header>
+
 
 <%@ include file ="navbar.jsp" %>
-</header>
+
 
 <section>
       <h2 class="text-center text-md-left pl-md-4">Bienvenidos a nuestra empresa de Asesorias</h2>
@@ -41,7 +41,7 @@ que le permita administrar los principales procesos que se llevan a cabo en ella
           <div class="form-group">
             <INPUT type="radio" name="usuario" value="Profesional"> Profesional<BR>
           </div>
-          <button type="submit" class="btn btn-success btn-block my-4">Enviar</button>
+          <%@ include file = "button.jsp" %>
   
        <p class="text-justify px-4">Gracias por su preferencia </p>
    
@@ -49,9 +49,9 @@ que le permita administrar los principales procesos que se llevan a cabo en ella
  </div>
  </div>
  </div>
- <footer>
+
   <%@ include file ="footer.jsp" %>
-   </footer>
+  
      
  <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

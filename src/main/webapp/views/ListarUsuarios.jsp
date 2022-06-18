@@ -1,48 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-    <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Validacion</title>
+<title>ListarUsuarios</title>
 <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    
 
- <body>
- 
- 
+</head>
+<body>
+
 
 <%@ include file ="navbar.jsp" %>
 
- 
- 
- <h2 class="text-center mb-4"> Hasta Pronto </h2>
- <p class="text-center px-4">
-       Gracias por visitarnos, esperamos verte pronto!
+
+<section>
+      <h2 class="text-center text-md-left pl-md-4">Listar Usuarios</h2>
+      <p class="text-center px-4">
+        Aqui podra encontrar el listado completo de Usuarios
       </p>
-      
- <p class="text-center px-4">
-      ¿Deseas abandonar la sesion?
-      </p>     
- <section>
+    </section>
  
- <form method="post" action="CerrarSesion">
- 		
-  <%@ include file = "button.jsp" %>
-         
-    </form>      
-        
-</section>
-
+ 
+ 
   <%@ include file ="footer.jsp" %>
- 
-
+  
      
  <script
     src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"

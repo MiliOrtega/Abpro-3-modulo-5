@@ -21,8 +21,11 @@
 
         <div class="container-fluid">
        		    <a class="nav-link active" href="#">Inicio</a>  
-                <a class="nav-link" href="#">Contacto </a>                
-                <a class="nav-link active" href="#"> Crear Capacitacion</a>        
+                <a class="nav-link" href="#">Contacto </a>
+                <a class="nav-link active" href="#">Crear Capacitacion</a> 
+                <a class="nav-link active" href="#">Crear Usuario</a> 
+                <a class="nav-link active" href="#">Listado de Usuarios</a> 
+                <a class="nav-link active" href="#">Cerrar Sesion</a>         
              
           </div>
           </nav>
@@ -49,9 +52,7 @@
             INGRESE CLAVE:
 		<input type="password" name="clave"> 
           </div>
-          <div class="col v-center">
-                <button class="btn btn-danger d-block mx-auto my-4"> Confirmar </button>
-            </div>  
+          <%@ include file = "button.jsp" %>
           
           
           
@@ -67,9 +68,9 @@
 
 
 
-<footer>
+
   <%@ include file ="footer.jsp" %>
-   </footer>
+  
 
      
  <script

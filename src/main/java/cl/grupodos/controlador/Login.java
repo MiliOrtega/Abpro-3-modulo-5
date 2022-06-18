@@ -1,4 +1,4 @@
-package cl.grupodos;
+package cl.grupodos.controlador;
 
 import java.io.IOException;
 
@@ -15,18 +15,18 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class Validacion
  */
 @WebServlet("/Validacion")
-public class Validacion extends HttpServlet {
+public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    
-    public Validacion() {
+    public Login() {
         super();
         
     }
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
+		getServletContext().getRequestDispatcher("/views/login.jsp").forward(request, response);
 	}
 
 	
@@ -54,19 +54,19 @@ public class Validacion extends HttpServlet {
                         }
                     }else{                            
                             out.println("Debe ingresar una contraseña");                            
-                            getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
+                            getServletContext().getRequestDispatcher("/views/login.jsp").forward(request, response);
                            
                     }
                 }else{
                    ;
                     out.println("Usuario incorrecta");                   
-                    getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
+                    getServletContext().getRequestDispatcher("/views/login.jsp").forward(request, response);
                     
                 }
             }else{
                 
                 out.println("Debe ingresar un usuario");                
-                getServletContext().getRequestDispatcher("/views/validacion.jsp").forward(request, response);
+                getServletContext().getRequestDispatcher("/views/login.jsp").forward(request, response);
                 
             }
         }

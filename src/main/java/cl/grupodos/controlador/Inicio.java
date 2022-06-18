@@ -1,4 +1,4 @@
-package cl.grupodos.servlet;
+package cl.grupodos.controlador;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,19 +9,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 /**
- * Servlet implementation class Contacto
+ * Servlet implementation class Inicio
  */
-@WebServlet("/Contacto")
-public class Contacto extends HttpServlet {
+@WebServlet("/PrevencionRiesgos")
+public class Inicio extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
 	
+       
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Contacto() {
+    public Inicio() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,31 +29,28 @@ public class Contacto extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		getServletContext().getRequestDispatcher("/views/Formulario.jsp").forward(request, response);
-
+		getServletContext().getRequestDispatcher("/views/Inicio.jsp").forward(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
-		String nombre = request.getParameter("nombres"); 		
-		String email = request.getParameter("mail");
-		
-		PrintWriter salida;
 		response.setContentType("text/html");
-		salida = response.getWriter();
+		PrintWriter pw = response.getWriter();
 		
-		salida.println("<html><body>");
-		salida.println("<h1> Contacto </h1>");
-		salida.println("<p> Sr/a: "+nombre+ " " + " "  +"</p>");
-		salida.println("<p> Correo electronico: "+ email +"</p>");
-		salida.println("<spam>"+ "Gracias por comunicarte con nosotros, a la brevedad nos comunicaremos contigo" +"</spam>");
-		salida.println("</body><html>");
+		String Cliente = request.getParameter("Cliente");
+		String Administrativo = request.getParameter("Administrativo");
+		String Profesional = request.getParameter("Profesional");		
+			
 		
-		salida.close();
+		
+		pw.println("<html><body>");
+		pw.println("<h1> Inicio </h1>");	
+		pw.println("<p> Bienvenido" + Cliente + Administrativo + Profesional + "</p>");
+		pw.println("</body><html>");
+		
+		pw.close();
 	}
 
 }
