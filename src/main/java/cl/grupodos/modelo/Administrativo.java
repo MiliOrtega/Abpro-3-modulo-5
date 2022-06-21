@@ -30,6 +30,11 @@ public class Administrativo {
 	public void setFechaIngreso(String fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
 	}
+
+	@Override
+	public String toString() {
+		return "Administrativo [Nombre=" + Nombre + ", fechaIngreso=" + fechaIngreso + "]";
+	}
 	
 	
 

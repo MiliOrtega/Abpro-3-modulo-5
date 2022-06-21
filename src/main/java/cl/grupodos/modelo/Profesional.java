@@ -24,6 +24,10 @@ public class Profesional {
 	public void setProfesion(String profesion) {
 		this.profesion = profesion;
 	}
+	@Override
+	public String toString() {
+		return "Profesional [nombre=" + nombre + ", profesion=" + profesion + "]";
+	}
 	
 	
 	

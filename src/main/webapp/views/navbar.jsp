@@ -9,6 +9,7 @@
                 <a class="nav-link" href="Formulario.jsp">Contacto </a>
                 <a class="nav-link active" href="Capacitacion.jsp">Crear Capacitacion</a> 
                 <a class="nav-link active" href="CrearUsuarios.jsp">Crear Usuario</a> 
+                 <a class="nav-link active" href="ListarCapacitacion.jsp">Listado de Capacitaciones</a> 
                 <a class="nav-link active" href="ListarUsuarios.jsp">Listado de Usuarios</a> 
                 <a class="nav-link active" href="CerrarSesion.jsp">Cerrar Sesion</a>         
              

@@ -3,7 +3,7 @@ package cl.grupodos.modelo;
 public class Capacitacion {
 	private String id;
 	private String nombreCapacitacion;
-	private String Lugar;
+	private String lugar;
 	private String hora;
 	
 	public Capacitacion () {
@@ -15,7 +15,7 @@ public class Capacitacion {
 		super();
 		this.id = id;
 		this.nombreCapacitacion = nombreCapacitacion;
-		Lugar = lugar;
+		this.lugar = lugar;
 		this.hora = hora;
 	}
 
@@ -40,13 +40,13 @@ public class Capacitacion {
 	}
 
 
-	public String getLugar() {
-		return Lugar;
+	public String getlugar() {
+		return lugar;
 	}
 
 
 	public void setLugar(String lugar) {
-		Lugar = lugar;
+		this.lugar = lugar;
 	}
 
 
@@ -57,6 +57,13 @@ public class Capacitacion {
 
 	public void setHora(String hora) {
 		this.hora = hora;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Capacitacion [id=" + id + ", nombreCapacitacion=" + nombreCapacitacion + ", lugar=" + lugar + ", hora="
+				+ hora + "]";
 	}
 	
 	

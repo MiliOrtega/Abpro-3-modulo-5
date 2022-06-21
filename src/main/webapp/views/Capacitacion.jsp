@@ -30,28 +30,21 @@
       <div class="col-12 col-md-8 col-lg-4 mx-auto">
        <FORM action="CrearCapacitacion" method="post">
           <div class="form-group">
-            <label for="name">Nombre: </label>
-            <input name="nombre" class="form-control">
+            <label for="id">ID Capacitacion: </label>
+            <input name="id" class="form-control">
           </div>
           <div class="form-group">
-            <label for="apellido">Apellido: </label>
-            <input name="apellido" class="form-control">
-          </div>
+            <label for="nombreCapacitacion">Nombre: </label>
+            <input name="nombreCapacitacion" class="form-control">
+          </div>        
+         
           <div class="form-group">
-            <label for="email">Correo Electrónico</label>
-            <input name="email"  class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="tipoCurso">Tipo Capacitacion</label>
-            <input name="tipoCurso"  class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="fecha">Fecha</label>
-            <input name="fecha" class="form-control">
-          </div>
-          <div class="form-group">
-            <label for="lugar">Lugar</label>
+            <label for="lugar">Lugar Capacitacion: </label>
             <input name="lugar" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="hora">Hora Capacitacion: </label>
+            <input name="hora" class="form-control">
           </div>
           <div class="form-group">
             <label for="msj"> Escribe tu Mensaje</label>

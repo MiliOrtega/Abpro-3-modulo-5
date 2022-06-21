@@ -16,31 +16,24 @@ import javax.servlet.http.HttpServletResponse;
 public class CrearUsuario extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+   
     public CrearUsuario() {
         super();
-        // TODO Auto-generated constructor stub
+       
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		getServletContext().getRequestDispatcher("/views/CrearUsuarios.jsp").forward(request, response);
-
+		getServletContext().getRequestDispatcher("/views/crearUsuario.jsp").forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		String nombre = request.getParameter("nombre"); 
-		String apellido = request.getParameter("apellido");
-		String email = request.getParameter("email");
+		String nombres = request.getParameter("nombre"); 
+		String apellidos = request.getParameter("apellido");
+		String correo = request.getParameter("email");
 		String tipoUsuario = request.getParameter("tipoUsuario");
 		
 						
@@ -50,8 +43,8 @@ public class CrearUsuario extends HttpServlet {
 		
 		salida.println("<html><body>");
 		salida.println("<h1> Usuario Creado </h1>");
-		salida.println("<p> Sr/a: "+nombre+ " " + " "  + apellido + "</p>");
-		salida.println("<p> Correo electronico: "+ email +"</p>");
+		salida.println("<p> Sr/a: "+nombres+ " " + " "  + apellidos + "</p>");
+		salida.println("<p> Correo electronico: "+ correo +"</p>");
 		salida.println("<p> Tipo de Usuario: "+ tipoUsuario +"</p>");
 		salida.println("<spam>"+ "Usuario creado exitosamente" +"</spam>");
 		salida.println("</body><html>");

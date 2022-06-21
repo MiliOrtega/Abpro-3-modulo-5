@@ -49,6 +49,11 @@ public class Usuario {
 	public void setRut(String rut) {
 		this.rut = rut;
 	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", rut=" + rut + "]";
+	}
 	
 	
 	

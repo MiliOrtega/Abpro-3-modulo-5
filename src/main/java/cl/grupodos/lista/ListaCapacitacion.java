@@ -3,9 +3,11 @@ package cl.grupodos.lista;
 import java.util.ArrayList;
 import java.util.List;
 
+import cl.grupodos.modelo.Capacitacion;
+
 public class ListaCapacitacion {
 	private static ListaCapacitacion capacitacion;
-	private static  List<String> lista;
+	private static  List<Capacitacion> lista;
 	
 	private ListaCapacitacion () {
 		
@@ -15,13 +17,13 @@ public class ListaCapacitacion {
 		
 		if (capacitacion == null) {
 			 capacitacion = new ListaCapacitacion ();
-			 lista = new ArrayList<String>();
+			 lista = new ArrayList<Capacitacion>();
 		 }
 		 
 		 return capacitacion;
 	}
 	
-	public List<String> getList(){
+	public List<Capacitacion> getList(){
 		return lista;
 	}
 }

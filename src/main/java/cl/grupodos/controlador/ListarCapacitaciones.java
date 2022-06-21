@@ -1,17 +1,18 @@
 package cl.grupodos.controlador;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import cl.grupodos.lista.ListaCapacitacion;
+import cl.grupodos.implementacion.ImplementacionCapacitacion;
+import cl.grupodos.interfaces.ICapacitacion;
+import cl.grupodos.modelo.Capacitacion;
 
 /**
  * Servlet implementation class ListarCapacitaciones
@@ -33,39 +34,15 @@ public class ListarCapacitaciones extends HttpServlet {
 	 */
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html");
-		PrintWriter pw = response.getWriter();
-		
-		Cookie[] cookies = request.getCookies();
-		
-		HttpSession session = request.getSession();
+		ICapacitacion capacitacion = new ImplementacionCapacitacion();
 		
 		
-		String tipoCurso = (String) session.getAttribute("tipoCurso");
-		String fecha = (String) session.getAttribute("fecha");
-		String lugar = (String) session.getAttribute("lugar");
-	
 		
+		ArrayList<Capacitacion> c = (ArrayList<Capacitacion>)capacitacion.getAll();
 		
-		pw.println("<html><body>");
-		pw.println("<h1> Listado de Capacitaciones </h1>");
+		request.setAttribute("capacitacion", c);
 		
-		for (Cookie ck: cookies) {		
-			pw.println("<p>" + ck.getName() + " " + ck.getValue()+ "</p>");
-	    	}
-		
-		pw.println("<p> Capacitacion: " + tipoCurso + "</p>");
-		pw.println("<p> Fecha: " + fecha + "</p>");	
-		pw.println("<p> Lugar: " + lugar + "</p>");
-		
-		for(String nom: ListaCapacitacion.getInstance().getList()) {
-			pw.println("<p> capacitaciones creadas: " + nom + "</p>");
-		}
-		
-			
-		pw.println("</body><html>");
-			
-		pw.close();	
+		getServletContext().getRequestDispatcher("/views/ListarCapacitacion.jsp").forward(request, response);	
 		
 	}
 
