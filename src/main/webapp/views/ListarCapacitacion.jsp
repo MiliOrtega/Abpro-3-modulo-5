@@ -26,7 +26,11 @@
         Aqui podra encontrar el listado completo de Capacitaciones Creadas
       </p>
     </section>
- 
+
+
+ <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-8 col-lg-4 mx-auto">
  <table class ="table">
  <thead>
  	<tr>
@@ -45,10 +49,12 @@
  		</tr>
  	</c:forEach>
  
- 	</tbody>
- 
- 
+ 	</tbody>  
  </table> 
+ 
+ </div>
+    </div>
+  </div>  
  
   <%@ include file ="footer.jsp" %>
   

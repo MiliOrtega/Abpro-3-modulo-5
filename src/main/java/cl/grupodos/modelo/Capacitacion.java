@@ -65,7 +65,14 @@ public class Capacitacion {
 		return "Capacitacion [id=" + id + ", nombreCapacitacion=" + nombreCapacitacion + ", lugar=" + lugar + ", hora="
 				+ hora + "]";
 	}
-	
+
+
+	public void addCapacitacion(Capacitacion capacitacion) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 	
 	
 	

@@ -28,28 +28,29 @@
     <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-md-8 col-lg-4 mx-auto">
-       <FORM action="CrearCapacitacion" method="post">
+       <FORM id =crearCapacitacion action="CrearCapacitacion" method="post">
           <div class="form-group">
             <label for="id">ID Capacitacion: </label>
-            <input name="id" class="form-control">
+            <input name="id" class="form-control"  type="text" required>
+            
           </div>
           <div class="form-group">
             <label for="nombreCapacitacion">Nombre: </label>
-            <input name="nombreCapacitacion" class="form-control">
+            <input name="nombreCapacitacion" class="form-control" type="text" required>
+             
           </div>        
          
           <div class="form-group">
             <label for="lugar">Lugar Capacitacion: </label>
-            <input name="lugar" class="form-control">
+            <input name="lugar" class="form-control" type="text" required>
+            
           </div>
           <div class="form-group">
             <label for="hora">Hora Capacitacion: </label>
-            <input name="hora" class="form-control">
+            <input name="hora" class="form-control" type="text" required>
+            
           </div>
-          <div class="form-group">
-            <label for="msj"> Escribe tu Mensaje</label>
-            <textarea name="msj" class="form-control" rows="3"></textarea>
-          </div>
+          
            <%@ include file = "button.jsp" %>
           
           
@@ -59,6 +60,15 @@
   </div>  
             
  </section>
+ <script type="src=js/jquery-3.4.1.min.js"></script>
+
+<script>
+ $(document).ready(function() {
+  $("#crearCapacitacion").validate();
+});
+ 
+ 
+ </script>
  
  
   <%@ include file ="footer.jsp" %>
