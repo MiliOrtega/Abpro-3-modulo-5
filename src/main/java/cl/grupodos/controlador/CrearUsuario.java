@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import cl.grupodos.implementacion.ImplementacionUsuario;
+import cl.grupodos.interfaces.IUsuario;
+import cl.grupodos.modelo.Usuario;
+
 /**
  * Servlet implementation class CrearUsuario
  */
@@ -30,22 +34,27 @@ public class CrearUsuario extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
+		String id = request.getParameter("id");
 		String nombres = request.getParameter("nombre"); 
 		String apellidos = request.getParameter("apellido");
-		String correo = request.getParameter("email");
-		String tipoUsuario = request.getParameter("tipoUsuario");
+		String rut = request.getParameter("rut");
+		
 		
 						
 		PrintWriter salida;
 		response.setContentType("text/html");
 		salida = response.getWriter();
 		
+		
+		IUsuario usuarios = new ImplementacionUsuario();
+		usuarios.addUsuario(new Usuario(id, nombres, apellidos, rut));
+		
 		salida.println("<html><body>");
 		salida.println("<h1> Usuario Creado </h1>");
+		salida.println("<p> ID: "+id+ " " + "</p>");
 		salida.println("<p> Sr/a: "+nombres+ " " + " "  + apellidos + "</p>");
-		salida.println("<p> Correo electronico: "+ correo +"</p>");
-		salida.println("<p> Tipo de Usuario: "+ tipoUsuario +"</p>");
+		salida.println("<p> Rut: "+rut+ "</p>");
+	
 		salida.println("<spam>"+ "Usuario creado exitosamente" +"</spam>");
 		salida.println("</body><html>");
 		

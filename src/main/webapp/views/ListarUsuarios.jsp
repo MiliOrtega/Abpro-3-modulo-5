@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +26,33 @@
         Aqui podra encontrar el listado completo de Usuarios
       </p>
     </section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-8 col-lg-4 mx-auto">
+ <table class ="table">
+ <thead>
+ 	<tr>
+ 	<th> Id </th>
+ 	<th> Nombre</th>
+ 	<th> Apellido </th>
+ 	<th> Rut </th>
+ 	</tr>
+ <tbody>
+ 	<c:forEach var="c" items="${usuario}">
+ 		<tr>
+ 		<td><c:out value="${c.getId()}"></c:out></td>
+ 		<td><c:out value="${c.getNombre()}"></c:out></td>
+ 		<td><c:out value="${c.getApellido()}"></c:out></td>
+ 		<td><c:out value="${c.getRut()}"></c:out></td>
+ 		</tr>
+ 	</c:forEach>
  
+ 	</tbody>  
+ </table> 
+ 
+ </div>
+    </div>
+  </div>  
  
  
   <%@ include file ="footer.jsp" %>

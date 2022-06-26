@@ -1,11 +1,16 @@
 package cl.grupodos.controlador;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import cl.grupodos.lista.UsuarioService;
+import cl.grupodos.modelo.Usuario;
 
 /**
  * Servlet implementation class ListarUsuarios
@@ -26,6 +31,14 @@ public class ListarUsuarios extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		UsuarioService usuario = new UsuarioService();
+		
+		ArrayList<Usuario> c = (ArrayList<Usuario>)usuario.getAll();
+		
+		request.setAttribute("usuario", c);	
+		
+		
+		
 		getServletContext().getRequestDispatcher("/views/ListarUsuarios.jsp").forward(request, response);
 	}
 

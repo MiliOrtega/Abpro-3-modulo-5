@@ -28,29 +28,28 @@
     <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-md-8 col-lg-4 mx-auto">
-       <FORM action="CrearCapacitacion" method="post">
+       <FORM action="CrearUsuario" method="post">
          
-          <div class="form-group">
-            <label for="name">Nombre: </label>
-            <input name="nombre" class="form-control">
+         
+            <div class="form-group">
+            <label for="id">ID Usuario: </label>
+            <input name="id" class="form-control"  type="text" required>
+            
           </div>
           <div class="form-group">
-            <label for="apellido">Apellido: </label>
-            <input name="apellido" class="form-control">
+            <label for="nombres">Nombre: </label>
+            <input name="nombres" class="form-control">
           </div>
           <div class="form-group">
-            <label for="email">Correo Electrónico</label>
-            <input name="email"  class="form-control">
+            <label for="apellidos">Apellido: </label>
+            <input name="apellidos" class="form-control">
           </div>
           <div class="form-group">
-            <label for="tipoUsuario">Tipo de Usuario: Cliente, Administrativo, Profesional </label>
-            <input name="tipoUsuario"  class="form-control">
+            <label for="rut">Rut: </label>
+            <input name="rut"  class="form-control">
           </div>
          
-          <div class="form-group">
-            <label for="msj"> Escribe tu Mensaje</label>
-            <textarea name="msj" class="form-control" rows="3"></textarea>
-          </div>
+         
           
           
           <%@ include file = "button.jsp" %>

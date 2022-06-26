@@ -1,7 +1,7 @@
 package cl.grupodos.modelo;
 
 public class Usuario {
-	private int id;
+	private String id;
 	private String nombre;
 	private String apellido;
 	private String rut;
@@ -10,7 +10,7 @@ public class Usuario {
 		
 	}
 	
-	public Usuario(int id, String nombre, String apellido, String rut) {
+	public Usuario(String id, String nombre, String apellido, String rut) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -18,11 +18,11 @@ public class Usuario {
 		this.rut = rut;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -53,6 +53,11 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", rut=" + rut + "]";
+	}
+
+	public void addUsuario(Usuario usuario) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
